@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  energy: 1
+  positivity: 1
+
+two:
+  energy: 1
+  positivity: 1
