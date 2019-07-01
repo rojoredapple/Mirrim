@@ -1,0 +1,30 @@
+<h1> Sign Up </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |m| %>
+      <%= m.label :name %>
+      <%= m.text_field :name %>
+
+      <%= m.label :email %>
+      <%= m.email_field :email %>
+
+      <%= m.label :gender %>
+      <%= m.select :gender, %w{Female, Male} %>
+
+      <%= m.label :birthday %>
+      <%= m.date_select :birthday %>
+
+      <%= m.label :location %>
+      <%= m.text_field :location %>
+
+      <%= m.label :password %>
+      <%= m.password_field %>
+
+      <%= m.label :password_confirmation, "Password Confirmation" %>
+      <%= m.password_field :password_confirmation %>
+
+      <%= m.submit "Create Account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

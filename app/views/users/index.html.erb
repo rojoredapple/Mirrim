@@ -1,0 +1,21 @@
+<h1> List of Users </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Email </th>
+      <th> Gender </th>
+      <th> Birthday </th>
+      <th> Location </th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

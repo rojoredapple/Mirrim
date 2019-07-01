@@ -1,0 +1,12 @@
+<h1> Logging Your Day </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@journal) do |m| %>
+
+      <%= m.label :text %>
+      <%= m.long_field :text %>
+
+    <% end %>
+  </div>
+</div>
