@@ -13,9 +13,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to root_path, notice: "Account was successfully created." }
+        log_in @user
+        flash[:success] = "Welcome to the Mirrim Smart Mirror!"
+        redirect_to @user
       else
-        format.html { render :new }
+        render 'new'
       end
     end
   end
@@ -24,7 +26,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :gender, :birthday, :location,
-                                 :password, :password_confirmation)
+                                   :password, :password_confirmation)
     end
 
 end
