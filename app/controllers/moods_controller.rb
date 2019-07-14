@@ -3,10 +3,6 @@ def index
 
 end
 
-def new 
-
-
-
 	def new
     @mood = mood.new
   end
