@@ -1,7 +1,7 @@
 class MoodsController < ApplicationController
-def index
+  def index
 
-end
+  end
 
 	def new
     @mood = mood.new
@@ -16,7 +16,10 @@ end
       else
         format.html { render :new }
       end
+
     end
+    
+  end
 
 
 
