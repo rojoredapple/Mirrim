@@ -1,6 +1,5 @@
 class MoodsController < ApplicationController
   def index
-
   end
 
 	def new
@@ -26,4 +25,3 @@ class MoodsController < ApplicationController
     end 
 
 end
-end 
