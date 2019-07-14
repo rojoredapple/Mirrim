@@ -1,0 +1,26 @@
+.signup {
+	margin-left: 50%;
+	margin-top: 50px;
+	display: block;
+	transform: translateX(-50%);
+}
+
+}
+
+label {
+	display: block;
+}
+
+
+.row label {
+	display: block;
+	margin-top: 20px;
+	font-size: 30px;
+
+	}
+
+.row {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	
+}

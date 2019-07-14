@@ -1,0 +1,5 @@
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/childprocess-1.0.1/ext
+/Users/anniexu/.rvm/rubies/ruby-2.6.3/bin/ruby mkrf_conf.rb
+
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/childprocess-1.0.1/ext
+/Users/anniexu/.rvm/rubies/ruby-2.6.3/bin/ruby -rrubygems /Users/anniexu/environment/mirrim/vendor/bundle/gems/rake-12.3.2/exe/rake RUBYARCHDIR\=/Users/anniexu/environment/mirrim/vendor/bundle/extensions/x86_64-darwin-17/2.6.0/childprocess-1.0.1 RUBYLIBDIR\=/Users/anniexu/environment/mirrim/vendor/bundle/extensions/x86_64-darwin-17/2.6.0/childprocess-1.0.1

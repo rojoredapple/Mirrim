@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190627191846) do
+ActiveRecord::Schema.define(version: 20190703203229) do
 
   create_table "journals", force: :cascade do |t|
     t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mantras", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "mantra"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +47,7 @@ ActiveRecord::Schema.define(version: 20190627191846) do
     t.string "gender"
     t.string "birthday"
     t.string "location"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
