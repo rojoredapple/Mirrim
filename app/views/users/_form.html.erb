@@ -1,0 +1,43 @@
+<%= form_for(@user) do |m| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <div class = "field">
+    <%= m.label :name %>
+    <%= m.text_field :name, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :email %>
+    <%= m.email_field :email, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :gender %>
+    <%= m.select :gender, %w{Female Male}, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :birthday %>
+    <%= m.date_field :birthday, :start_year => 1900,
+                      :end_year => Date.current.year, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :location %>
+    <%= m.text_field :location, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :password %>
+    <%= m.password_field :password, class: 'form_control' %>
+  </div>
+
+  <div class = "field">
+    <%= m.label :password_confirmation, "Password Confirmation" %>
+    <%= m.password_field :password_confirmation, class: 'form_control' %>
+  </div>
+
+  <div class = "actions">
+    <%= m.submit yield(:button_text), class: "btn btn-primary" %>
+  </div>
+<% end %>

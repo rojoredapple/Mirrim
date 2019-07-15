@@ -1,6 +1,6 @@
 class MoodsController < ApplicationController
   def index
-end 
+end
 
   def new
     #respond_to do |format|
