@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def show
+    @user = User.first
+
+  end
 
   def index
     @users = User.all
@@ -9,17 +13,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
-    respond_to do |format|
+    #respond_to do |format|
       if @user.save
-        log_in @user
-        format.html { redirect_to @mood, notice: "You're in!" }
-        #flash[:success] = "Welcome to the Mirrim Smart Mirror!"
+        #log_in @user
+        redirect_to @mantra
       else
-        format.html { render :new }
+        render :new
       end
-    end
   end
 
   private
@@ -28,11 +30,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :gender, :day, :location,
                                    :password, :password_confirmation)
     end
-
-
-def show
-    @user = User.find(params[:id])
-end
 
 
   

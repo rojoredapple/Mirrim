@@ -14,11 +14,10 @@
 </div>
 
 <!--profile button -->
-<tbody>
-  <% @users.each do |user| %>
+
 <button class ="button" id ="profile" onclick="myFunction('showProfile','mm','log','info')">Profile</button>
 <div class ="hidden" id="showProfile"> 
-  <h1> You are: <%= @user.name%> </h1>
+    <h1> You are: <%= @user.name %> </h1>
     <tr>
       <td>Birthday</td>
       <td><%= @user.birthday %></td>
@@ -35,9 +34,6 @@
       <td>Mantra </td>
       <td>I am enough.</td>
     </tr>
-
-    <% end %>
-  </tbody>
 
 </div>
 
