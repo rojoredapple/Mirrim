@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
+
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
@@ -7,12 +7,7 @@ class User < ApplicationRecord
   has_many :moods, dependent: :destroy
   has_many :traits, dependent: :destroy
   has_many :journals, dependent: :destroy
-=======
-  has_many :moods
-  has_many :traits
-  has_many :journals
   has_many :mantras
->>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1
 
   validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

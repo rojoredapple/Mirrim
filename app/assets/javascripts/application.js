@@ -11,10 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-<<<<<<< HEAD
-=======
-
->>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1
 //= require rails-ujs
 //= require bootstrap
 //= require turbolinks
