@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #get '/login', to: 'sessions#create'
   #get '/logout', to: 'sessions#destroy'
   resources :users
+  resources :mantras
+  get '/mantra', to: 'mantras#new'
   get '/journals', to: 'journals#new'
   resources :journals
 end

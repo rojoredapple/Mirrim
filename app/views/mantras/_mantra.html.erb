@@ -1,0 +1,9 @@
+<p id="mantra-<%= mantra.id %>">
+  <span class="content"><%= mantra.content %>
+  	
+  </span>
+</br>
+    
+  <p class="timestamp">
+    You've been using this mantra for <%= time_ago_in_words(mantra.created_at) %>, click <a href="/mantra"> here </a>if you'd like to switch it up.</p>
+</p> 

@@ -18,8 +18,9 @@
 <button class ="button" id ="profile" onclick="myFunction('showProfile','mm','log','info')">Profile</button>
 <div class ="hidden" id="showProfile"> 
     <h1> You are: <%= @user.name %> </h1>
-    <h1> Your personal mantra is: 
+    <h1> Your personal mantra is: <%= render @mantra %>
     </h1>
+    <p> And you're absolutely right, you're brilliant!</p>
     
 </div>
 

@@ -1,10 +1,10 @@
-class CreateMantras < ActiveRecord::Migration[5.1]
+class CreateMantras < ActiveRecord::Migration[5.0]
   def change
     create_table :mantras do |t|
-      t.integer :user_id
-      t.string :mantra
+      t.text :content
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
-  end
+      end
 end
