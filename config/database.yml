@@ -21,6 +21,13 @@ test:
   <<: *default
   database: db/test.sqlite
 
-production:
+#production:
+ # <<: *default
+ # database: db/production.sqlite
+
+
+  production:
   <<: *default
-  database: db/production.sqlite
+  database: mirrim_production
+  username: mirrim
+  password: <%= ENV['MIRRIM_DATABASE_PASSWORD'] %>
