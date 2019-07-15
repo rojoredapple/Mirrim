@@ -1,0 +1,6 @@
+class MantrasController < ApplicationController
+
+
+
+
+end

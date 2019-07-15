@@ -1,0 +1,15 @@
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+/Users/anniexu/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/anniexu/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190703-2537-ezilco.rb extconf.rb
+creating Makefile
+
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/cruby.bundle
+
+current directory: /Users/anniexu/environment/mirrim/vendor/bundle/gems/bindex-0.7.0/ext/skiptrace
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20190703-2537-1s1igwa/skiptrace

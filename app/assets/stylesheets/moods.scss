@@ -1,0 +1,106 @@
+// Place all the styles related to the Moods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+body {
+    background: black;
+    color:white;
+}
+
+
+p, td, th, span {
+    font-size: 30px;
+}
+
+td {padding: 10px;}
+.button {
+    display: block;
+    padding: auto;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    color:white;
+    background-color: #696969;
+}
+
+button#mm {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+button#log {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+button#info {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+button#profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+div.hidden {
+    display: none;
+    position: absolute;
+    left:50%;
+    top:50px;
+    transform: translateX(-50%);
+}
+
+
+.daysofweek > span {
+    display: inline-block;
+    width: 50px;
+}
+
+.months > article {
+    height: 300px;
+    width: 375px;
+    padding-bottom: 60px;
+}
+
+.months  span {
+    margin-left: -70px;
+    position: absolute;
+}
+
+.months div {
+    background-color: rgb(75, 129, 40);
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+
+#entry2, #entry12, #entry8 {
+    background-color: rgb(215, 29, 30);
+}
+
+#entry18, #entry19, #entry20, #entry21, #entry22, #entry23, #entry24, #entry25, #entry26, #entry27 {
+    background-color: rgb(253, 184, 47);
+}
+
+.month0 > #entry22, #entry12, #entry11, #entry9, #entry21, #entry18 {
+    background-color: rgb(34, 67, 121);
+}
+
+
+
+.month1 > #entry20, #entry1, #entry2, #entry3, #entry15 {
+    background-color: rgb(253, 184, 47);
+}
+
+.month1 > #entry4, #entry7, #entry11, #entry12, #entry13, #entry29 {
+    background-color: rgb(34, 67, 121);
+}

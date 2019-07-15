@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% provide(:title, 'New User') %>
 <% provide(:button_text, 'Create Account') %>
 <h1> Sign Up </h1>
@@ -5,5 +6,38 @@
 <div class = "row">
   <div class = "col-md-6 col-md-offset-3">
     <%= render 'form' %>
+=======
+<% provide(:title, "New User") %>
+<h1 class="signup"> Welcome! </h1>
+<p class="signup"> We're so glad you've chosen to use MIRRIM to really spend time with and understand the person reflected back at you. 
+</br></br>
+Before we show how it will work, please create an account to keep your information private and secure. </p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |m| %>
+      <%= m.label :name %>
+      <%= m.text_field :name %>
+
+      <%= m.label :email %>
+      <%= m.email_field :email %>
+
+      <%= m.label :gender %>
+      <%= m.select :gender, %w{Female Male Non-Binary} %>
+
+      <%= m.label :birthday %>
+      <%= m.date_select(:birthday, start_year: 1985, end_year: 2010) %>
+
+      <%= m.label :location %>
+      <%= m.text_field  :location %>
+
+      <%= m.label :password %>
+      <%= m.password_field :password %>
+
+      <%= m.label :password_confirmation, "Password Confirmation" %>
+      <%= m.password_field :password_confirmation %>
+
+      <%= m.submit "Create Account", class: "btn btn-primary" %>
+    <% end %>
+>>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1
   </div>
 </div>

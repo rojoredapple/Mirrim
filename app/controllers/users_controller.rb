@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
 
+<<<<<<< HEAD
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account!"
@@ -39,6 +40,16 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'edit'
+=======
+    respond_to do |format|
+      if @user.save
+        log_in @user
+        format.html { redirect_to @mood, notice: "You're in!" }
+        #flash[:success] = "Welcome to the Mirrim Smart Mirror!"
+      else
+        format.html { render :new }
+      end
+>>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1
     end
   end
 
@@ -51,7 +62,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :gender, :birthday, :location,
+      params.require(:user).permit(:name, :email, :gender, :day, :location,
                                    :password, :password_confirmation)
     end
 

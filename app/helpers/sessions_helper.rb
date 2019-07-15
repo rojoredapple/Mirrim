@@ -1,4 +1,5 @@
 module SessionsHelper
+<<<<<<< HEAD
 
   # Logs In the Given User
   def log_in(user)
@@ -45,3 +46,6 @@ module SessionsHelper
     @current_user = nil
   end
 end
+=======
+end
+>>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1

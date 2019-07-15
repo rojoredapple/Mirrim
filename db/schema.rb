@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20190709215046) do
+=======
+ActiveRecord::Schema.define(version: 20190703203229) do
+>>>>>>> 0a431bd53f9c5e6a68f864c0320e322d398e1cd1
 
   create_table "journals", force: :cascade do |t|
     t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mantras", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "mantra"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +51,7 @@ ActiveRecord::Schema.define(version: 20190709215046) do
     t.string "gender"
     t.string "birthday"
     t.string "location"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false

@@ -1,4 +1,4 @@
-class JournalsController < ApllicationController
+class JournalsController < ApplicationController
 
   def index
     @journals = Journal.all
@@ -15,9 +15,16 @@ class JournalsController < ApllicationController
       if @journal.save
         format.html { redirect_to root_path, notice: "Congratulations on journaling!" }
       else
-        formal.html { render :new }
+        format.html { render :new }
       end
     end
   end
+
+
+
+    def journals_params
+      params.permit(:text)
+    end
+
 
 end
