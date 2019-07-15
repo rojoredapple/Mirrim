@@ -1,27 +1,19 @@
 class MoodsController < ApplicationController
   def index
-  end
+end
 
-	def new
-    @mood = mood.new
-  end
-
-  def create
-    @mood = mood.create(moods_params)
-
-    respond_to do |format|
+  def new
+    #respond_to do |format|
+      @mood = mood.new
       if @mood.save
-        format.html { redirect_to root_path, notice: "Congratulations on plotting your mood!" }
+        flash[:moodsaved] = "Saved."
+        redirect_to root_path
       else
-        format.html { render :new }
+        render :new
+        flash[:moodnots] = "Oops, that didn't work. Press anywhere on the chart to plot your mood."
       end
 
-    end
-
   end
 
-    def user_params
-      params.permit(:mood)
-    end 
 
 end

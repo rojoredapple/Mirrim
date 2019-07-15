@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+<<<<<<< HEAD
 
   def new
   end
@@ -26,5 +27,10 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+=======
+def create 
+end 
+
+>>>>>>> d4f2d9d4888103543f3513dfd48bb21b4c1b005a
 
 end

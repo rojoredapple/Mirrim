@@ -15,7 +15,6 @@ class User < ApplicationRecord
                                    format: { with: VALID_EMAIL_REGEX },
                                    uniqueness: { case_sensitive: false }
   validates :gender, presence: true
-  validates :birthday, presence: true
   validates :location, presence: true
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true

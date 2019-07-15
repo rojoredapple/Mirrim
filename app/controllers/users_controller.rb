@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
@@ -10,6 +11,15 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+=======
+    def show
+    @user = User.find_by(id: session[:user_id])
+  end
+
+
+  def index
+    @user = User.all
+>>>>>>> d4f2d9d4888103543f3513dfd48bb21b4c1b005a
   end
 
   def new
@@ -17,8 +27,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
 
+<<<<<<< HEAD
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account!"
@@ -40,6 +51,15 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+=======
+    #respond_to do |format|
+      if @user.save
+        log_in @user
+        redirect_to root_path
+      else
+        render :new
+      end
+>>>>>>> d4f2d9d4888103543f3513dfd48bb21b4c1b005a
   end
 
   def destroy
@@ -55,6 +75,7 @@ class UsersController < ApplicationController
                                    :password, :password_confirmation)
     end
 
+<<<<<<< HEAD
     # Confirms a Logged-In User
     def logged_in_user
       unless logged_in?
@@ -73,4 +94,8 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
+=======
+
+  
+>>>>>>> d4f2d9d4888103543f3513dfd48bb21b4c1b005a
 end

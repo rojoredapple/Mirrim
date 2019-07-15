@@ -12,29 +12,33 @@
 <p class="signup"> We're so glad you've chosen to use MIRRIM to really spend time with and understand the person reflected back at you. 
 </br></br>
 Before we show how it will work, please create an account to keep your information private and secure. </p>
+
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |m| %>
+    <%= form_for @user do |m| %>
+      <%= render 'shared/error_messages' %>
+
+
       <%= m.label :name %>
-      <%= m.text_field :name %>
+      <%= m.text_field :name, class: 'form-control'  %>
 
       <%= m.label :email %>
-      <%= m.email_field :email %>
+      <%= m.email_field :email, class: 'form-control' %>
 
       <%= m.label :gender %>
-      <%= m.select :gender, %w{Female Male Non-Binary} %>
+      <%= m.select :gender, %w{Female Male Non-Binary}, class: 'form-control' %>
 
       <%= m.label :birthday %>
-      <%= m.date_select(:birthday, start_year: 1985, end_year: 2010) %>
+      <%= m.date_select(:birthday, start_year: 1985, end_year: 2010, class: 'form-control') %>
 
       <%= m.label :location %>
-      <%= m.text_field  :location %>
+      <%= m.text_field  :location, class: 'form-control' %>
 
       <%= m.label :password %>
-      <%= m.password_field :password %>
+      <%= m.password_field :password, class: 'form-control' %>
 
       <%= m.label :password_confirmation, "Password Confirmation" %>
-      <%= m.password_field :password_confirmation %>
+      <%= m.password_field :password_confirmation, class: 'form-control' %>
 
       <%= m.submit "Create Account", class: "btn btn-primary" %>
     <% end %>
