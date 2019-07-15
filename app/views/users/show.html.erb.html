@@ -1,8 +1,9 @@
+
+
 <!DOCTYPE html>
 <html>
 <body>
 
-<!--mood meter button -->
 
 
 <!--mood meter button -->
@@ -13,31 +14,30 @@
 </div>
 
 <!--profile button -->
+<tbody>
+  <% @users.each do |user| %>
 <button class ="button" id ="profile" onclick="myFunction('showProfile','mm','log','info')">Profile</button>
 <div class ="hidden" id="showProfile"> 
-  <h1> You are: Emily Woods </h1>
-  <table>
-    <tr>
-      <td>Age</td>
-      <td>17</td>
-    </tr>
+  <h1> You are: <%= @user.name%> </h1>
     <tr>
       <td>Birthday</td>
-      <td>17/08/2001</td>
+      <td><%= @user.birthday %></td>
     </tr>
     <tr>
-      <td>Pronouns</td>
-      <td>She/her/hers</td>
+      <td>Gender</td>
+      <td><%= @user.gender %></td>
     </tr>
     <tr>
       <td>Location</td>
-      <td>San Francisco</td>
+      <td><%= @user.location%></td>
     </tr>
     <tr>
-      <td>Mantra    </td>
+      <td>Mantra </td>
       <td>I am enough.</td>
     </tr>
-  </table>
+
+    <% end %>
+  </tbody>
 
 </div>
 

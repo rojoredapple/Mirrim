@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
-  root 'moods#index'
+  get 'user/:id' => 'users#show'
+  root 'users#show'
   get '/signup', to: 'users#new'
   #get '/login', to: 'sessions#new'
   #get '/login', to: 'sessions#create'

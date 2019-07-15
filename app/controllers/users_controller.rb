@@ -29,4 +29,11 @@ class UsersController < ApplicationController
                                    :password, :password_confirmation)
     end
 
+
+def show
+    @user = User.find(params[:id])
+end
+
+
+  
 end
