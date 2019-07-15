@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190627191846) do
+ActiveRecord::Schema.define(version: 20190709215046) do
 
   create_table "journals", force: :cascade do |t|
     t.string "text"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20190627191846) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.string "password_digest"
+    t.string "remember_digest"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end
